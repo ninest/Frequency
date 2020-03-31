@@ -8,7 +8,11 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    // TODO: add meta
+    meta: {
+      title: 'Frequency'
+    }
   },
   {
     path: '/about',
@@ -18,6 +22,9 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: function () {
       return import(/* webpackChunkName: "about" */ '../views/About.vue')
+    },
+    meta: {
+      title: 'About - Frequency'
     }
   }
 ]
