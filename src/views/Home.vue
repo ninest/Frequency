@@ -2,6 +2,7 @@
   main
     .top
     .bottom
+      Selector
       Display
       Slider
       Buttons
@@ -9,11 +10,13 @@
 
 <script>
 import Display from '@/components/Display.vue';
+import Selector from '@/components/Selector.vue';
 import Slider from '@/components/Slider.vue';
 import Buttons from '@/components/Buttons.vue';
 export default {
   components: {
     Display,
+    Selector,
     Slider,
     Buttons
   },

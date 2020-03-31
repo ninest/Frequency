@@ -9,6 +9,7 @@ export default new Vuex.Store({
     maxFrequency: 30000,
     minFrequency: 0,
     play: false,
+    waveType: 'sine',
   },
   mutations: {
     setFrequency(state, value) {
@@ -16,19 +17,27 @@ export default new Vuex.Store({
     },
 
     playPause(state) {
-      state.play = !state.play
+      state.play = !state.play;
+
+      if (state.play == true) {
+        
+      }
     },
 
     increaseFrequency(state) {
       console.log(state.frequency)
       if (state.frequency < state.maxFrequency - 100)
-        state.frequency = state.frequency + 100
+        state.frequency = state.frequency + 100;
     },
 
     decreaseFrequency(state) {
       if (state.frequency > state.minFrequency + 100)
-      state.frequency = state.frequency - 100
+      state.frequency = state.frequency - 100;
     },
+
+    selectWaveType(state, value) {
+      this.state.waveType = value;;
+    }
   },
   actions: {
   },
