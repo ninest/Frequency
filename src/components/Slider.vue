@@ -3,16 +3,7 @@
   div
     .display
       input(type="number" v-model="storeFrequency")
-    input(type="range" min="0" max="30000" v-model="storeFrequency")
-
-    .buttons
-      div
-        button <<
-      div
-        button.play-pause &#9658; 
-      //- &#9724; 
-      div
-        button >>
+    input(type="range" :min="$store.state.minFrequency" :max="$store.state.maxFrequency" v-model="storeFrequency")
 
 </template>
 
@@ -24,7 +15,7 @@ export default {
         return this.$store.state.frequency;
       },
       set(value) {
-        this.$store.commit('setFrequency', value);
+        this.$store.commit('setFrequency', parseInt(value));
       }
     }
   }
@@ -63,9 +54,8 @@ div {
     height: 0.7em;
     background: #ddd;
     outline: none;
-    transition: 0.2s;
 
-    border-radius: 0.2em;
+    border-radius: var(--border-radius);
 
     &::-webkit-slider-thumb {
       -webkit-appearance: none;
@@ -73,35 +63,25 @@ div {
 
       width: 2.3em;
       height: 1.3em;
-      border-radius: 0.2em;
-      background: var(--accent-color);
+      border-radius: var(--border-radius);
+      background: rgba(var(--accent-color-rgb), 0.5);
+      border: 2px solid rgba(var(--accent-color-rgb));
+      // border: 1px solid var(--accent-color);
       cursor: pointer;
+
+      transition: 0.2s;
     }
+
 
     &:hover {
-    }
-  }
-
-  .buttons {
-    margin-top: var(--extra-padding);
-
-    display: flex;
-    justify-content: space-between;
-
-    div {
-      display: flex;
-      justify-content: center;
-
-      button {
-        height: 3em;
-        width: 3em;
-        border-radius: 50%;
-
-        &.play-pause {
-          padding-left: 11px;
-        }
+      &::-webkit-slider-thumb {
+        border: 5px solid rgba(var(--accent-color-rgb));
       }
     }
+
+    margin-bottom: calc(1.2* var(--extra-padding));
   }
+
+  
 }
 </style>
