@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center"><i>
-*A tone generator*
+A minimalistic tone generator
 </i></p>
 
 ## Gallery
