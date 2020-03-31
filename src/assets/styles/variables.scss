@@ -1,0 +1,29 @@
+@mixin mobile-screen {
+  @media screen and (max-width: 750px) {
+    @content;
+  }
+}
+@mixin tablet-screen {
+  @media screen and (max-width: 1150px) {
+    @content;
+  }
+}
+@mixin not-mobile-screen {
+  @media screen and (min-width: 750px) {
+    @content;
+  }
+}
+
+:root {
+  --extra-padding: 2.1em;
+  --main-padding: 1em;
+  --medium-padding: 0.5em;
+  --dense-padding: 0.3em;
+
+  // font
+  --font-size: 19px;
+  --font-color: rgba(0, 0, 0, 0.822);
+
+  // color
+  --accent-color: #0000ff;
+}
