@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    frequency: 15000,
+    frequency: 3000,
     maxFrequency: 30000,
     minFrequency: 0,
     play: false,
