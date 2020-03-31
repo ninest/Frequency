@@ -20,6 +20,9 @@ export default {
     Slider,
     Buttons
   },
+  mounted() {
+    this.$store.commit('initAudio')
+  }
 };
 </script>
 

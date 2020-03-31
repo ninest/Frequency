@@ -1,7 +1,7 @@
 <template lang="pug">
   .grid
     SelectableWaveType(waveType="sine")
-    SelectableWaveType(waveType="sqare")
+    SelectableWaveType(waveType="square")
     SelectableWaveType(waveType="sawtooth")
     SelectableWaveType(waveType="triangle")
 </template>
