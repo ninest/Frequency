@@ -1,8 +1,6 @@
 
 <template lang="pug">
   div
-    .display
-      input(type="number" v-model="storeFrequency")
     input(type="range" :min="$store.state.minFrequency" :max="$store.state.maxFrequency" v-model="storeFrequency")
 
 </template>
@@ -25,26 +23,6 @@ export default {
 <style lang="scss" scoped>
 div {
   width: 100%;
-
-  .display {
-    input {
-      width: 100%;
-      text-align: center;
-      font-size: 4em;
-      font-weight: 900;
-
-      border: none;
-      outline: none;
-
-      // hide spinners
-      &::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0;
-      }
-    }
-
-    margin-bottom: var(--extra-padding);
-  }
 
   input[type="range"] {
     -webkit-appearance: none;
@@ -78,8 +56,6 @@ div {
         border: 5px solid rgba(var(--accent-color-rgb));
       }
     }
-
-    margin-bottom: calc(1.2* var(--extra-padding));
   }
 
   

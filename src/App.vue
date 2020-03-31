@@ -7,6 +7,6 @@
 
 <style lang="scss">
 main {
-  padding: calc(2* var(--extra-padding)) 10%;
+  padding: calc(var(--extra-padding)) 10%;
 }
 </style>
