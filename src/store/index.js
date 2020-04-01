@@ -75,10 +75,20 @@ export default new Vuex.Store({
 
     save(state) {
       console.log("Saving");
-      state.saves.push({
+
+      const newSave = {
         frequency: state.frequency,
         waveType: state.waveType,
-      })
+      };
+
+      // TODO fix
+
+      // make sure not already in in state.saves
+      if (!state.saves.includes(newSave)) {
+        state.saves.push(newSave)
+      } else {
+        console.log("Already there")
+      }
     },
 
     loadSave(state, save) {
