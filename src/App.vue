@@ -6,7 +6,13 @@
 </template>
 
 <style lang="scss">
+@import '@/assets/styles/variables.scss';
+
 main {
-  padding: calc(var(--extra-padding)) 10%;
+  padding: calc(var(--main-padding)) 5%;
+
+  @include not-mobile-screen {
+    padding: calc(var(--main-padding)) 30%;
+  }
 }
 </style>

@@ -1,6 +1,7 @@
 <template lang="pug">
   main
     .top
+      AppBar
     .bottom
       Selector
       Display
@@ -9,12 +10,14 @@
 </template>
 
 <script>
+import AppBar from '@/components/AppBar.vue';
 import Display from '@/components/Display.vue';
 import Selector from '@/components/Selector.vue';
 import Slider from '@/components/Slider.vue';
 import Buttons from '@/components/Buttons.vue';
 export default {
   components: {
+    AppBar,
     Display,
     Selector,
     Slider,
@@ -43,6 +46,6 @@ main {
   }
 
 
-  padding-bottom: calc( 7*var(--main-padding));
+  padding-bottom: calc(5*var(--main-padding));
 }
 </style>

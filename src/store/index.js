@@ -61,6 +61,10 @@ export default new Vuex.Store({
       state.audioContext = new (window.AudioContext || window.webkitAudioContext)();
       state.oscillator = state.audioContext.createOscillator();
       state.oscillator.connect(state.audioContext.destination);
+    },
+
+    save(state) {
+      console.log("Saving")
     }
   },
   actions: {
