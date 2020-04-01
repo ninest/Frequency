@@ -1,7 +1,9 @@
 <template lang="pug">
   .app-bar
     h1 Frequency
-    button(@click="$store.commit('save')") save
+    div
+      button(@click="$router.push('saves')") presets
+      button(@click="$store.commit('save')") save
 </template>
 
 <style lang="scss" scoped>

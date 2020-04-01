@@ -1,5 +1,13 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import VuexPersistence from 'vuex-persist';
+
+const vuexLocal = new VuexPersistence({
+  storage: window.localStorage,
+  reducer: state => ({
+    saves: state.saves
+  })
+})
 
 Vue.use(Vuex)
 
@@ -13,6 +21,8 @@ export default new Vuex.Store({
 
     oscillator: null,
     audioContext: null,
+
+    saves: []
   },
   mutations: {
     setFrequency(state, value) {
@@ -64,11 +74,23 @@ export default new Vuex.Store({
     },
 
     save(state) {
-      console.log("Saving")
+      console.log("Saving");
+      state.saves.push({
+        frequency: state.frequency,
+        waveType: state.waveType,
+      })
+    },
+
+    loadSave(state, save) {
+      console.log("Loading save");
+      console.log(save.frequency, save.waveType)
+      state.frequency = save.frequency;
+      state.waveType = save.waveType;
     }
   },
   actions: {
   },
   modules: {
-  }
+  },
+  plugins: [vuexLocal.plugin]
 })
