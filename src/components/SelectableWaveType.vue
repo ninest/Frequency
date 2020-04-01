@@ -25,25 +25,11 @@
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/styles/button.scss';
 .button {
-  padding: var(--main-padding);
-  border-radius: var(--border-radius);
+  display: flex-end;
+  @include button;
 
   text-align: center;
-  font-weight: 700;
-  letter-spacing: 3px;
-
-  background-color: var(--gray-background-color);
-  border: var(--gray-border);
-
-
-  &.selected {
-    background-color: var(--selected-background-color);
-    border: var(--selected-border);
-  }
-
-  &:focus {
-    outline: none;
-  }
 }
 </style>

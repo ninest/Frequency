@@ -5,6 +5,14 @@
       router-view
 </template>
 
+<script>
+export default {
+  metaInfo: {
+    titleTemplate: '%s - Frequency',
+  }
+}
+</script>
+
 <style lang="scss">
 @import '@/assets/styles/variables.scss';
 

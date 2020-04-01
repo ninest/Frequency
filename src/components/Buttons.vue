@@ -32,6 +32,8 @@
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/styles/button.scss';
+
 .buttons {
   display: flex;
   justify-content: space-between;
@@ -44,25 +46,18 @@
     button {
       height: 3em;
       width: 6em;
-      border-radius: var(--border-radius);
 
       font-size: 0.8em;
 
-      background-color: var(--gray-background-color);
-      border: var(--gray-border);
-
-      outline: none;
-
-      transition: 0.2s;
+      @include button;
+      padding: unset;
 
       &.play-pause {
-        padding-left: 11px;
+        padding-left: 9px;
         font-size: 1em;
-        background-color: rgba(0, 0, 0, 0.100);
-      }
 
-      &:hover, &:focus {
-        background-color: var(--selected-background-color);
+        // this should look more dominant
+        background-color: rgba(var(--accent-color-rgb), 0.33);
         border: var(--selected-border);
       }
     }

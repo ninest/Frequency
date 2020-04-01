@@ -27,14 +27,12 @@
   --font-color: rgba(0, 0, 0, 0.822);
 
   // color
+  --background-color: #ffffff;
+
   --accent-color: #0000ff;
   --accent-color-rgb: 0, 0, 255;
 
-  // borders
-  --gray-border: 2px solid rgba(0, 0, 0, 0.09);
-  --selected-border: 2px solid rgba(var(--accent-color-rgb), 0.09);
-
-  // divs
-  --gray-background-color: rgba(0, 0, 0, 0.06);
-  --selected-background-color: rgba(var(--accent-color-rgb), 0.10);
+  // danger color
+  --danger-color: #ff0000;
+  --danger-color-rgb: 255, 0, 0;
 }

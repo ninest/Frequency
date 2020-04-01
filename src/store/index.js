@@ -86,6 +86,10 @@ export default new Vuex.Store({
       console.log(save.frequency, save.waveType)
       state.frequency = save.frequency;
       state.waveType = save.waveType;
+    },
+
+    deleteAll(state) {
+      state.saves = [];
     }
   },
   actions: {

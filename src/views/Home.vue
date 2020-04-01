@@ -16,6 +16,10 @@ import Selector from '@/components/Selector.vue';
 import Slider from '@/components/Slider.vue';
 import Buttons from '@/components/Buttons.vue';
 export default {
+  metaInfo: {
+    title: 'Frequency',
+    titleTemplate: null,
+  },
   components: {
     AppBar,
     Display,
