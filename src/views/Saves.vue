@@ -1,7 +1,7 @@
 <template lang="pug">
   main
     BackButton(to="/")
-    h1 Saves {{noSaves}}
+    h1 Saves
     .all-saves()
       .preset(
         v-for="(save, index) in saves" v-bind:key="save.frequency"
